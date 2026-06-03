@@ -33,7 +33,7 @@ def agregar_lista (lista:list, mensaje_inicio:str, mensaje_final:str)->list:
 
     region = pedir_string(f"{mensaje_inicio} la region {mensaje_final}: ")
 
-    while region != "Johto" and region != "Kanto" and region != "Sinnoh" and region != "Hoenn" and region != "Kalos":
+    while region != "Johto" and region != "Kanto" and region != "Sinnoh" and region != "Hoenn" and region != "Kalos" and region != "Unova":
         region = input(f"Error!!! {mensaje_inicio} la region {mensaje_final}: ").capitalize()
 
     nuevo_poke = [nombre, tipo, altura, peso, nivel, fuerza_ataque, region]

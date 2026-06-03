@@ -43,7 +43,7 @@ def generar_menu_opciones_simple(op1:str, op2:str)->str:
     3-● Volver al menu principal
     '''
 
-def generar_menu_opciones_regiones(op1:str, op2:str, op3:str, op4:str, op5:str)->str:
+def generar_menu_opciones_regiones(op1:str, op2:str, op3:str, op4:str, op5:str, op6:str)->str:
     '''
     Brief: Genera un menu de 5 opciones que el usuario le va pasando por parametro
 
@@ -57,7 +57,8 @@ def generar_menu_opciones_regiones(op1:str, op2:str, op3:str, op4:str, op5:str)-
     3-● {op3}
     4-● {op4}
     5-● {op5}
-    6-● Volver al menu principal
+    6-● {op6}
+    7-● Volver al menu principal
     '''
 
 def poke_menu ()->None:
@@ -110,10 +111,10 @@ def poke_menu ()->None:
             opcion_ordenamiento = validar_ingreso_rango(1,3, "Ingrese una opcion para ordenar la lista: ")
             
             if opcion_ordenamiento == 1:
-                print("\n --- LISTA ASCENDENTE --- ")
+                print("\n --- ORDENASTE LA LISTA ASCENDENTEMENTE --- ")
                 ordenar_lista_ascendente(lista_pokemon)
             elif opcion_ordenamiento == 2:
-                print("\n --- LISTA DESCENDENTE --- ")
+                print("\n --- ORDENASTE LA LISTA DESCENDENTEMENTE --- ")
                 ordenar_lista_descendente(lista_pokemon)
             else:
                 print("Volviendo al menu principal")
@@ -132,9 +133,9 @@ def poke_menu ()->None:
             
         elif poke_opcion == 8:
             print("\n  ---REGIONES--- ")
-            print(generar_menu_opciones_regiones("La region Kanto", "La region Sinnoh", "La region Kalos", "La region Hoenn", "La region Johto"))
+            print(generar_menu_opciones_regiones("La region Kanto", "La region Sinnoh", "La region Kalos", "La region Hoenn", "La region Johto", "La region Unova"))
 
-            opcion_region = validar_ingreso_rango(1, 6, "Ingrese una region para ver a los pokemones de dicha region: ")
+            opcion_region = validar_ingreso_rango(1, 7, "Ingrese una region para ver a los pokemones de dicha region: ")
 
             if opcion_region == 1:
                 print("\n --- POKEMONES DE KANTO --- ")
@@ -156,6 +157,10 @@ def poke_menu ()->None:
                 print("\n --- POKEMONES DE JOHTO --- ")
                 lista_Johto = crear_lista_filtrada(lista_pokemon, "Johto", 6)
                 mostrar_lista(lista_Johto)
+            elif opcion_region == 6:
+                print("\n --- POKEMONES DE UNOVA --- ")
+                lista_Unova = crear_lista_filtrada(lista_pokemon, "Unova", 6)
+                mostrar_lista(lista_Unova)
             else:
                 print("Volviendo al menu principal")
                 
