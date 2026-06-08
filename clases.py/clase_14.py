@@ -108,8 +108,67 @@ user_dict = {
 }
 
 lista_usuario = [
-    user_dict
+    user_dict,
+    {
+        "id": 2,
+        "nombre": "mariano",
+        "apellido": "gomez",
+        "nacinalidad": "argentina",
+        "dni": 2323232322323,
+    },
+    {
+        "id": 3,
+        "nombre": "alejandro",
+        "apellido": "josefo",
+        "nacinalidad": "roma",
+        "dni": 1,
+    },    
+    {
+        "id": 4,
+        "nombre": "mariano",
+        "apellido": "fernandez",
+        "nacinalidad": "argentina",
+        "dni": 2323232322323,
+    }
 ]
+
+def modificar(lista:list):
+    pedir_id = input("Ingresa el ID del usuario a modificar: ")
+
+    for usuario in lista:
+        if usuario['id'] == pedir_id:
+            nombre = input("Ingrese el nombre de ususario a cambiar: ")
+            usuario['nombre'] = nombre
+
+    
+    
+
+def mostrar_diccionario (diccionario:dict):
+    mensaje = ""
+    for clave in diccionario:
+        mensaje += f"{clave}: {diccionario[clave]}\n"
+    mensaje += "----------------"
+    return mensaje
+
+def recorrer_lista_dict (lista:list):
+    for i in range(len(lista)):
+        user = mostrar_diccionario(lista[i])
+        print(user)
+        
+        
+
+def eliminar (lista:list,):
+    dato_usuario = int(input("Ingrese DNI del ususario a eliminar: "))
+
+    for i in range(len(lista)):
+        if lista[i]["dni"] == dato_usuario:
+            lista.pop(i)
+            break
+
+    # for diccionario in lista:
+    #     if diccionario["dni"] == dato_usuario:
+    #         lista.pop(dato_usuario)
+
 
 def agregar (lista:list, lista_keys):
 
@@ -120,7 +179,7 @@ def agregar (lista:list, lista_keys):
     
     lista.append(diccionario)
 
-agregar(lista_usuario)
+
 
 
 

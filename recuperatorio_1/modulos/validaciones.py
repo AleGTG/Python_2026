@@ -26,7 +26,7 @@ def determinar_texto (string:str)->bool:
             bandera = True
 
         if mayuscula == False and minuscula == False and espacio == False:
-            return False
+            bandera = False
 
     return bandera
 
