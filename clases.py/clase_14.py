@@ -179,6 +179,9 @@ def agregar (lista:list, lista_keys):
     
     lista.append(diccionario)
 
+a = agregar(lista_usuario, "id")
+print(a)
+
 
 
 
