@@ -132,13 +132,13 @@ lista_usuario = [
     }
 ]
 
-def modificar(lista:list):
+def modificar_dato_diccionario(lista:list, key:str, mensaje:str):
     pedir_id = input("Ingresa el ID del usuario a modificar: ")
 
     for usuario in lista:
         if usuario['id'] == pedir_id:
-            nombre = input("Ingrese el nombre de ususario a cambiar: ")
-            usuario['nombre'] = nombre
+            modificado = input(mensaje)
+            usuario[key] = modificado
 
     
     
