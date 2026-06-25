@@ -5,25 +5,25 @@ lista_ususarios = [
      "fernando",
      {"hola": "chau"}
 ]
-# copia_lista_usuarios = lista_ususarios.copy() # la variable copia tiene otra memoria de direccion original
+ # la variable copia tiene otra memoria de direccion original
                                             # solo copia el contenido de la lista original se le llama shallow copy
 # lista_ususarios = tuple(lista_ususarios)  # los tipos de datos simple se guardan normal si el tipo de dato es
 #                                            sencillo copia el valor solo sirve para una lista de una dimension
                                             # si se encuentra con un elmento complejo copia el id
 
 import copy
-copia_lista_usuarios = copy.deepcopy(lista_ususarios)
+# copia_lista_usuarios = copy.deepcopy(lista_ususarios)
 
-copia_lista_usuarios[0].append(4)
+# copia_lista_usuarios[0].append(4)
 
-print(id(lista_ususarios))
-print(id(copia_lista_usuarios))
+# print(id(lista_ususarios))
+# print(id(copia_lista_usuarios))
 
-print("----------------")
-print(lista_ususarios)
-print(copia_lista_usuarios)
+# print("----------------")
+# print(lista_ususarios)
+# print(copia_lista_usuarios)
 
-
+copia_lista_usuarios = lista_ususarios.copy()
 
 # copia_lista_usuarios = []
 # for elemento in lista_ususarios:

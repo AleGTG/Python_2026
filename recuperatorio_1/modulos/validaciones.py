@@ -101,7 +101,7 @@ def eliminar_espacios_repetidos(string:str)->str:
     '''
 
     if len(string) == 0:
-        return ""
+         resultado = ""
 
     resultado = string[0]
 

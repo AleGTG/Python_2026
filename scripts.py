@@ -49,7 +49,6 @@ precio_final = calcular_precio_final(numero_1, numero_2)
 print(descuento)
 print(precio_final)
 
-
-
+#C:/Users/guerr/OneDrive/Desktop/parcial_2/dragon_ball.json
 
 
